@@ -1,0 +1,36 @@
+#header{
+    background-image: url("/assets/images/bannerModified.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#logo {
+    margin: 20px;
+    
+}
+#curve{
+    fill:url(#logoimg);
+     
+}
+#headertext{
+    color:bisque;
+    text-shadow: 3px 3px  goldenrod ;
+    font-size: 50px;
+}
+.text{
+    fill: goldenrod;
+    font-size: 21px;
+    transform-origin:50% 50%;
+    animation: rotate 15s linear infinite;
+}
+
+
+@keyframes rotate {
+from {
+    transform: rotateZ(0deg);
+}
+to{
+    transform: rotateZ(360deg);
+}
+    
+}

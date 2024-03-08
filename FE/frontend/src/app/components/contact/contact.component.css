@@ -1,0 +1,28 @@
+form {
+    background-color: rgb(254, 254, 226);
+    margin: 20px 20px 20px 0px;
+    padding: 20px;
+    border-radius:5px;
+}
+.contactInfo {
+   
+    margin: 20px 0px 20px 20px;
+    padding: 20px;
+    border-radius:5px;
+}
+/* color pallette
+    golds:
+    rgba(187, 189, 123, 0.8)
+    rgb(199, 198, 146) 
+    rgb(254, 254, 226)
+    rgb(144,147,21)
+
+    reds:
+    rgb(150,37,29)
+    rgb(131,36,29)
+
+    grays:
+    rgb(46,55,57)
+    rgb(17,26,27)
+
+*/

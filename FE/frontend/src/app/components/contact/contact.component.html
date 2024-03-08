@@ -1,0 +1,93 @@
+<div class="row container justify-content-center">
+
+    <div class="col-sm-4">
+        <div class="contactInfo text-light">
+            <h3> Contact Us Directly</h3>
+            <p class="mt-3 mb-3"> Email: Order.SRS-Printing.com <br>
+                Contact Number: (817) 555-1212<br>
+                <br>
+                123 SomeStreet<br>
+                Fort Worth Texas<br>
+                75656
+            </p>
+
+        </div>
+    </div>
+    <div class=" col-sm-6">
+        <form [formGroup]="contactFormGroup" (ngSubmit)="onSubmit()">
+            <h3> Custom order form</h3>
+            <div formGroupName="contact">
+                <div class="mb-3 mt-3">
+                    <label for="contactName" class="form-label">Your Name: (required)</label>
+                    <input  formControlName="contactName" class="form-control" id="contactName"
+                        name="contactName" type="text" required/>
+                    <div *ngIf="contactName?.invalid && (contactName?.dirty || contactName?.touched)"
+                        class="alert alert-danger mt-1">
+                        <div *ngIf="contactName?.errors?.['required']">
+                            Name is required.
+                        </div>
+                        <div *ngIf="contactName?.errors?.['minLength']">
+                            Name must be at least 2 characters.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="contactEm" class="form-label">Your Email:(required)</label>
+                    <input type="text" class="form-control" formControlName="contactEm" id="contactEm" name="contactEm">
+                    <div *ngIf="contactEm?.invalid && (contactEm?.dirty || contactEm?.touched)"
+                        class="alert alert-danger mt-1">
+                        <div *ngIf="contactEm?.errors?.['required']">
+                            Email is required.
+                        </div>
+                        <div *ngIf="contactEm?.errors?.['pattern']">
+                            Invalid Email!
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="contactNum" class="form-label">Your Contact Number:(required)</label>
+                    <input type="contactNum" class="form-control" formControlName="contactNum" id="contactNum"
+                        name="contactNum">
+                    <div *ngIf="contactNum?.invalid && (contactNum?.dirty || contactNum?.touched)"
+                        class="alert alert-danger mt-1">
+                        <div *ngIf="contactNum?.errors?.['required']">
+                            Contact Number is required.
+                        </div>
+                        <div *ngIf="contactNum?.errors?.['minLength']">
+                            Contact number must be at least 10 digits
+                        </div>
+
+                    </div>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="subject">Subject(required)</label>
+                    <input class="form-control" formControlName="subject" id="subject" name="subject">
+                    <div *ngIf="subject?.invalid && (subject?.dirty || subject?.touched)"
+                        class="alert alert-danger mt-1">
+                        <div *ngIf="subject?.errors?.['required']">
+                            Subject is required.
+                        </div>
+                        <div *ngIf="subject?.errors?.['minLength']">
+                            Subject must be at least 4 characters.
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="message">Message:(optional)</label>
+                    <textarea class="form-control" formControlName="message" rows="5" id="message"
+                        name="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning">Send</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
